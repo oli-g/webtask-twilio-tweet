@@ -3,10 +3,7 @@ service:
 
 provider:
   name: webtasks
-
-# you can define service wide environment variables here
-#  environment:
-#    variable1: value1
+  environment: ${file(secrets.yml)}
 
 functions:
   main:

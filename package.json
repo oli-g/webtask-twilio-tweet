@@ -1,7 +1,7 @@
 {
-    "name": "webtasks-nodejs",
+    "name": "webtasks-twilio-tweet",
     "version": "1.0.0",
-    "description": "Auth0 Webtasks NodeJS template for the Serverless Framework",
+    "description": "Post a new tweet by sending an SMS to a Twilio phone number, using https://webtask.io/ from Auth0 to handle webhooks",
     "main": "handler.js",
     "keywords": [
         "serverless",
@@ -11,5 +11,8 @@
     ],
     "devDependencies": {
         "@webtask/serverless-webtasks": "^1.0.1"
+    },
+    "dependencies": {
+        "twitter": "^1.7.1"
     }
 }

@@ -4,7 +4,7 @@ Post a new tweet by sending an SMS to a Twilio phone number, using https://webta
 
 ## Introduction
 
-[Webtasks](https://webtask.io) from [Auth0](https://auth0.com) allows you to expose HTTP endpoints without worrying about where to host your code. Webtasks are well suited to run custom code on web hook events from [Twilio](https://www.twilio.com/), whenever a message is received by a phone number.
+[Webtask.io](https://webtask.io) from [Auth0](https://auth0.com) allows you to expose HTTP endpoints without worrying about where to host your code. Webtasks are well suited to run custom code on webhook events from [Twilio](https://www.twilio.com/), whenever a message is received by a phone number.
 
 ## Requirements
 
@@ -21,9 +21,10 @@ Post a new tweet by sending an SMS to a Twilio phone number, using https://webta
 4. Install `serverless` with `npm install -g serverless`
 4. Deploy to [Webtask.io](https://webtask.io):
     * Install dependencies with `cd webtask-twilio-tweet && npm install`
-    * Set up credentials with `sls config credentials --provider webtasks`
+    * Set up Webtask credentials with `sls config credentials --provider webtasks`
+    * Set up Twitter credentials with `cp secrets.yml.example secrets.yml`, providing your own credentials
     * Deploy function with `sls deploy`
-5. Update incoming SMS webhook URL on Twilio with the *webtask* URL returned by previous deploy command
+5. Update incoming SMS webhook URL on Twilio with the *webtask* endpoint URL returned by previous `sls deploy` command
 
 ## Resources
 
